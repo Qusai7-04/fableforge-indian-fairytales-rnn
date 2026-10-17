@@ -156,7 +156,8 @@ Qualitative.
 
 The loss curves in figures/loss_curves.png show all four models improving sharply for the first three
 epochs and then slowly, with a widening train and validation gap, which means the models begin to
-overfit the small corpus after the initial epochs.
+overfit the small corpus after the initial epochs. The accuracy curves in figures/accuracy_curves.png
+show the same shape, with validation accuracy rising quickly and then flattening.
 
 ## 7. Sampling temperature analysis
 
@@ -218,6 +219,7 @@ would be expected to overtake the plain RNN.
         indian_fairy_tales_raw.txt  downloaded automatically on first run
       figures/
         loss_curves.png
+        accuracy_curves.png
         model_comparison.png
         temperature_diversity.png
       models/
