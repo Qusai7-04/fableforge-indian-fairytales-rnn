@@ -1,0 +1,348 @@
+{
+  "config": {
+    "seq_len": 10,
+    "vocab_size": 3000,
+    "emb_dim": 64,
+    "hid_dim": 128,
+    "stride": 8,
+    "epochs": 8,
+    "batch": 512,
+    "lr": 0.001,
+    "train_frac": 0.8,
+    "val_frac": 0.1
+  },
+  "test_targets": 726,
+  "baseline": {
+    "loss": 7.902200976834761,
+    "ppl": 2703.2255222067124,
+    "top1": 0.07575757575757576
+  },
+  "summary": {
+    "SimpleRNN": {
+      "best_val_loss": 5.874054908752441,
+      "test_loss": 5.757232189178467,
+      "test_ppl": 316.4711832255139,
+      "test_top1": 0.07575757575757576,
+      "test_top5": 0.21074380165289255,
+      "params": 603832,
+      "train_time_s": 20.0486843585968,
+      "history": {
+        "train_loss": [
+          7.960701425870259,
+          7.118329167366028,
+          6.097675999005635,
+          5.902805209159851,
+          5.8567737738291425,
+          5.820093313852946,
+          5.7829867998758955,
+          5.755712588628133
+        ],
+        "val_loss": [
+          7.755338191986084,
+          6.326314449310303,
+          5.874054908752441,
+          5.905710697174072,
+          5.918676376342773,
+          5.904829025268555,
+          5.886297225952148,
+          5.8752055168151855
+        ],
+        "val_acc": [
+          0.015172413793103448,
+          0.02620689655172414,
+          0.07448275862068965,
+          0.07586206896551724,
+          0.07448275862068965,
+          0.07448275862068965,
+          0.07862068965517241,
+          0.08
+        ]
+      }
+    },
+    "BiRNN": {
+      "best_val_loss": 5.751509189605713,
+      "test_loss": 5.601898670196533,
+      "test_ppl": 270.9403457315665,
+      "test_top1": 0.10881542699724518,
+      "test_top5": 0.28512396694214875,
+      "params": 1012664,
+      "train_time_s": 33.16226410865784,
+      "history": {
+        "train_loss": [
+          7.895580252011617,
+          6.8539985815684,
+          5.837055404980977,
+          5.621548851331075,
+          5.490748882293701,
+          5.368860761324565,
+          5.245286146799724,
+          5.140345374743144
+        ],
+        "val_loss": [
+          7.581079483032227,
+          6.11491060256958,
+          5.800538063049316,
+          5.826818466186523,
+          5.813966751098633,
+          5.789223670959473,
+          5.7653093338012695,
+          5.751509189605713
+        ],
+        "val_acc": [
+          0.05655172413793103,
+          0.08275862068965517,
+          0.08137931034482758,
+          0.08413793103448276,
+          0.08551724137931034,
+          0.08551724137931034,
+          0.1006896551724138,
+          0.09793103448275862
+        ]
+      }
+    },
+    "LSTM": {
+      "best_val_loss": 5.923089981079102,
+      "test_loss": 5.796126365661621,
+      "test_ppl": 329.02257507535035,
+      "test_top1": 0.07575757575757576,
+      "test_top5": 0.19008264462809918,
+      "params": 678328,
+      "train_time_s": 43.211609840393066,
+      "history": {
+        "train_loss": [
+          7.963208397229512,
+          7.465009331703186,
+          6.140698870023091,
+          5.9204570055007935,
+          5.864456295967102,
+          5.844785769780477,
+          5.821178476015727,
+          5.79689606030782
+        ],
+        "val_loss": [
+          7.871328830718994,
+          6.489166736602783,
+          5.923089981079102,
+          5.964486598968506,
+          5.9705491065979,
+          5.9470415115356445,
+          5.933186054229736,
+          5.926164627075195
+        ],
+        "val_acc": [
+          0.037241379310344824,
+          0.07172413793103448,
+          0.07448275862068965,
+          0.07448275862068965,
+          0.07448275862068965,
+          0.07448275862068965,
+          0.07586206896551724,
+          0.07448275862068965
+        ]
+      }
+    },
+    "GRU": {
+      "best_val_loss": 5.890603542327881,
+      "test_loss": 5.785080909729004,
+      "test_ppl": 325.4083677503869,
+      "test_top1": 0.08402203856749312,
+      "test_top5": 0.2603305785123967,
+      "params": 653496,
+      "train_time_s": 33.75203847885132,
+      "history": {
+        "train_loss": [
+          7.944052775700887,
+          7.381084640820821,
+          6.1197512944539385,
+          5.91016697883606,
+          5.842781225840251,
+          5.7942144473393755,
+          5.757832765579224,
+          5.7125130494435625
+        ],
+        "val_loss": [
+          7.781114101409912,
+          6.4555158615112305,
+          5.898437976837158,
+          5.926104545593262,
+          5.936497211456299,
+          5.905835151672363,
+          5.896711349487305,
+          5.890603542327881
+        ],
+        "val_acc": [
+          0.04275862068965517,
+          0.05655172413793103,
+          0.07448275862068965,
+          0.07586206896551724,
+          0.07724137931034483,
+          0.08,
+          0.07862068965517241,
+          0.08551724137931034
+        ]
+      }
+    }
+  },
+  "temperature_raw": {
+    "SimpleRNN": {
+      "0.5": {
+        "distinct2": 0.6784415994942311,
+        "rep_trigram": 0.11811811811811812,
+        "unk_rate": 0.028789923526765633
+      },
+      "1.0": {
+        "distinct2": 0.9970760233918128,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.014394961763382817
+      },
+      "1.5": {
+        "distinct2": 1.0,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.0029239766081871343
+      }
+    },
+    "BiRNN": {
+      "0.5": {
+        "distinct2": 0.8173700015805279,
+        "rep_trigram": 0.06381381381381379,
+        "unk_rate": 0.017318938371569947
+      },
+      "1.0": {
+        "distinct2": 0.9969969969969968,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.01716899085320138
+      },
+      "1.5": {
+        "distinct2": 1.0,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.0
+      }
+    },
+    "LSTM": {
+      "0.5": {
+        "distinct2": 0.646040777619725,
+        "rep_trigram": 0.13355021688355018,
+        "unk_rate": 0.008547008547008548
+      },
+      "1.0": {
+        "distinct2": 0.9941520467836258,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.020167941220572798
+      },
+      "1.5": {
+        "distinct2": 1.0,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.014394961763382817
+      }
+    },
+    "GRU": {
+      "0.5": {
+        "distinct2": 0.8496127706654022,
+        "rep_trigram": 0.024107440774107425,
+        "unk_rate": 0.03148897885739991
+      },
+      "1.0": {
+        "distinct2": 1.0,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.017318938371569947
+      },
+      "1.5": {
+        "distinct2": 1.0,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.0029239766081871343
+      }
+    }
+  },
+  "temperature_topk": {
+    "SimpleRNN": {
+      "0.5": {
+        "distinct2": 0.6728307254623044,
+        "rep_trigram": 0.1136136136136136,
+        "unk_rate": 0.030026990553306338
+      },
+      "1.0": {
+        "distinct2": 0.9735656709340921,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.038798920377867745
+      },
+      "1.5": {
+        "distinct2": 0.9647937411095308,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.008659469185784975
+      }
+    },
+    "BiRNN": {
+      "0.5": {
+        "distinct2": 0.7428876244665719,
+        "rep_trigram": 0.1325075075075075,
+        "unk_rate": 0.01720647773279352
+      },
+      "1.0": {
+        "distinct2": 0.9822190611664295,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.030251911830859193
+      },
+      "1.5": {
+        "distinct2": 0.986842105263158,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.01720647773279352
+      }
+    },
+    "LSTM": {
+      "0.5": {
+        "distinct2": 0.5884305357989569,
+        "rep_trigram": 0.1955705705705706,
+        "unk_rate": 0.012932973459289248
+      },
+      "1.0": {
+        "distinct2": 0.9516358463726884,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.030251911830859197
+      },
+      "1.5": {
+        "distinct2": 0.9778330962541489,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.012820512820512822
+      }
+    },
+    "GRU": {
+      "0.5": {
+        "distinct2": 0.8326220957799905,
+        "rep_trigram": 0.031656656656656644,
+        "unk_rate": 0.030139451192082767
+      },
+      "1.0": {
+        "distinct2": 0.9734471313418682,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.025978407557354925
+      },
+      "1.5": {
+        "distinct2": 0.9911095305832148,
+        "rep_trigram": 0.0,
+        "unk_rate": 0.021479982006297794
+      }
+    }
+  },
+  "samples": {
+    "SimpleRNN": {
+      "0.5": "the king said to the me he to the the the was to he <unk> very in the the the the and and the to the the the and a the and and the to the the my very",
+      "1.0": "the king said to gangazara at to to his which hand saying in former hands see only but his she fear <unk> and the the none replied them and have prince to when as only has the with down",
+      "1.5": "the king said to wait gates matter sure him returned most if which king's the can them after it already happily fond livelihood fire you yet plain touch still said how last neither followed has skilled agreed now i"
+    },
+    "BiRNN": {
+      "0.5": "the king said to <unk> the whole they of the young and then and and he <unk> the tiger the young to and the king of the raja and i am and the in the young and he was",
+      "1.0": "the king said to her turn had by <unk> the tiger them could him husband dip world and will he she busy he let out here she <unk> of me the down the they so and if ring wicked",
+      "1.5": "the king said to him the begging everything matter your kill whom tree misdeeds for rohu replied boy road song sciences him in nevertheless grain which i i softened as would is has he given he spite when because"
+    },
+    "LSTM": {
+      "0.5": "the king said to the and a the and he and the the of and <unk> he the he the then the the the the him killed the and he was and the the to <unk> and the a",
+      "1.0": "the king said to brute in court you flowers woman set <unk> communication over you given his thick and back is the of <unk> they you very you you answered the window speak did go seek he the of",
+      "1.5": "the king said to bone that were before chanced their at yawning the counsel slaves sorrow what the trying army opened it bird assembled hearing news queens' brothers a sat of daughter could he princess you cricket measures he"
+    },
+    "GRU": {
+      "0.5": "the king said to be hear the but the to you then one and the king and he and a the the see the of the <unk> the the king and their of the you to you the and",
+      "1.0": "the king said to horse you morning when then daughter lotus the slaves was by the as came the princess held and sarkap as seven him he of the you these beak pitcher rasalu and was she in have",
+      "1.5": "the king said to kindly brother living grip with the dropped grave rats chose single affair farmer another saying on jackal little inhabitants sons laughed could to and put his stable axe sticks wedding my bridle meal then mothers"
+    }
+  }
+}

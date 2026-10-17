@@ -1,0 +1,7 @@
+# FableForge — dependencies
+# CPU-only is sufficient; no GPU required.
+torch>=2.0
+numpy>=1.24
+matplotlib>=3.6
+jupyter
+nbformat
